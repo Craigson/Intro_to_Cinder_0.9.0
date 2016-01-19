@@ -327,7 +327,7 @@ public:
 <h5>Step 3:	Defining the Class</h5>
 <p>
 Add the following lines of code to the Particle.cpp file:
-<p>
+</p>
 <pre>
 #include "cinder/Rand.h"
 
@@ -405,7 +405,7 @@ Add the following lines of code to your App’s setup() function:
 </pre>
 <p>
 Add the following lines of code to the App’s draw() function:
-<p>
+</p>
 <pre>
     gl::clear( Color::black() );
     
