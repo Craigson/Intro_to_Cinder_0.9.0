@@ -8,7 +8,13 @@ Useful links:
 <p>Cinder Reference: https://libcinder.org/docs/release/v0.9.0/reference/index.html </p>
 <p>Learn OpenGL: http://learnopengl.com/ </p>
 
+
+<h4> </h4>
+<h5> </h5>
+
+
 <h4>Setting up Cinder</h4>
 <h5>1) Download Cinder:</h5>
+<p> Go to the Cinder website and download the latest release - 0.9.0 for Mac OSX (https://libcinder.org/download) </p>
 
 
