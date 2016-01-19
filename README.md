@@ -419,9 +419,9 @@ Add the following lines of code to the App’s draw() function:
 
 <h3>What's next?  </h3>  
 
-<h5>Adjusting the window Settings</h>
+<h5>Adjusting the window Settings</h5>
 <p>Unlike p5 or processing, adjusting the window size is not quite as straight forward, but is still easy enough once you know what to do.  Every C++ program needs a main() function.  The creators of Cinder have created the convenient functions for us in the form of setup(), update(), and draw() that automatically form part of the app's main() function by means of the CINDER_APP() that you find at the bottom of any Cinder project's main app .cpp file.  </p>
-![alt text](screenshots/16-main_app.jpg)  
+![alt text](screenshots/16-cinder_app.jpg)  
 
 <p>From the picture above, you can see that the CINDER_APP() function takes 2 arguments.  The first is the code for your app (which is actually written as a class), and the second is you telling the main() C++ which renderer you want to use. In this case being the default *RendererGl*.</p>
 
