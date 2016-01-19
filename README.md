@@ -435,3 +435,28 @@ Add the following lines of code to the App’s draw() function:
 </pre>  
 <p>Your final CINDER_APP() should look something like this:</p>
 ![alt text](screenshots/17-settings.jpg)
+
+---
+
+<h4>Xcode, a love/hate relationship</h4>
+<p>Part of why Kat and I are doing this is to try and share some of the things we struggled with when we were first getting started.  I can say with certainty that I've spent as much, if not more, time trying to figure out why my code wasn't working and it turned out to be a problem with Xcode, rather than my programming logic.</p>
+<p>Here are some of the common issues:</p>
+
+<h5>The Cinder path is broken</h5>
+<p>
+As we mentioned earlier, folder structure is **EXTREMELY IMPORTANT**.  It's highly recommended that you don't move folders around within the Cinder folder, and that you keep folders on the correct levels.  You can think of different Cinder releases as 'self-contained versions', meaning that if you download a new release, say the next 0.9.1, that you keep this as a separate folder to your other Cinder versions.  In addition to this, creat a new "myProjects" folder for the new version, and use the TinderBox specific to that version to create projects.  In otherwords, projects created with Cinder-0.8.4 should live within the 'myProjects' folder within that version of Cinder.  These projects may or may not run if moved into Cinder-0.9.0. Using TinderBox to create new projects is a good way to avoid frustration when it comes to using Cinder and Xcode.
+</p>
+<p>
+One of the biggest frustrations with Cinder is finding an example project online, downloading it, moving it into your 'myProjects' folder, only to find that Xcode throws 6000 errors at you when you try and run the project.  The reason for this is that when Xcode compiles and links all the code in your program, it's searching through the Cinder folders **relative** to your project.  This means that when you download someone else's .xcodeproj file, it still thinks it's looking in that person's Cinder folder.  To fix this, we need to tell Xcode where to look for the files.  We do this in the *build settings*.  To access the build settings, we go to the project settings by clicking on the Xcode project in the file tree:
+</p>
+![alt text](screenshots/18-proj_settings.jpg)
+<p>Click on the 'Build Settings' tab and scroll all the way to the bottom where it says 'User-Define'.
+![alt text](screenshots/19-build_settings.jpg)
+
+
+<h5>Header links</h5>
+<h5>Breakpoints</h5>
+
+---
+
+<h4>Some suggested best practises:</h4>
