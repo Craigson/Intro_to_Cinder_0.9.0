@@ -414,6 +414,7 @@ Add the following lines of code to the App’s draw() function:
 ![alt text](screenshots/15-main_code.jpg)
 
 <p> Build and run the code.  Et Voila! </p>
+![alt text](screenshots/15-2-voila.jpg)
 
 ---
 
@@ -452,7 +453,17 @@ One of the biggest frustrations with Cinder is finding an example project online
 ![alt text](screenshots/18-proj_settings.jpg)
 <p>Click on the 'Build Settings' tab and scroll all the way to the bottom where it says 'User-Define'.
 ![alt text](screenshots/19-build_settings.jpg)
-
+<p>
+You'll notice that in the image, for my particular project file, the CINDER_PATH (ie. where xcode begins its search for the various files that make up the Cinder library) is located three folder levels below my project folder, indicated by "../../..".  This means the path to cinder is specific to my coputer is *relative* to my project folder.  If you've downloaded someone else's project, chances are that this path is wrong.  The error shown below is usually a good indicator that this is the problem:
+![alt text](screenshots/20-error.jpg)
+<p>In order to fix it, when need to change the user-defined CINDER_PATH.  The best bet is to replace whatever's there with your own Cinder's absolute path.  An trick for doing this is as follows:</p>
+*Open finder and navigate to your Cinder folder
+*Right-click on any file or folder inside of your Cinder folder and select
+![alt text](screenshots/21-get_info.jpg)
+*Copy the folder path by selecting the path under the section *where*
+![alt text](screenshots/22-where.jpg)
+*Go back to Cinder and paste this into the CINDER_PATH by double clicking on the existing path and replacing the text.
+![alt text](screenshots/23-replace_path.jpg)
 
 <h5>Header links</h5>
 <h5>Breakpoints</h5>
