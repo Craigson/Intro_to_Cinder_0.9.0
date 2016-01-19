@@ -32,3 +32,37 @@ Build and run the project by clicking the ‘play’ button, or using the keyboa
 </p>
 
 ![alt text](screenshots/1-run)
+
+<h4>Section B:	Your first project</h4>
+<p>
+Create a folder inside the Cinder directory, give it a name, eg. “myProjects”.  the path to the folder should look something like this: ‘Users/Craig/Documents/Cinder_0.9.0/myProjects/’ 
+NB: DO NOT MOVE THIS FOLDER AT ANY POINT ONCE YOU’VE CREATED IT.
+
+Cinder provides us with a very convenient tool for creating new projects.  Use Tinderbox every time you want to create a new project.
+
+Navigate to the folder Cinder > tools > TinderBox-Mac and open TinderBox - if you’ve just downloaded it you’ll need to right-click and select ‘open’
+
+You should see something like this: 
+</p>
+![alt text](screenshots/1-tinderbox.jpg)
+
+<p>
+‘Template’ should always be ‘Basic OpenGL’.
+
+Give your project a name, I recommend calling this first one “TheBasics”.
+
+For ‘location’, select the folder you created earlier - this is where all your future projects will be stored.
+
+The environment is ‘xCode’ and make sure ‘create local git repository’ is unchecked.
+
+Click Next.  Click Finish.
+</p>
+
+![alt text](screenshots/3-finish.jpg)
+
+<p>
+Navigate to the project folder and open your Xcode project file (‘your_project_name’.xcodeproj).
+
+In Xcode, check that everything is working as it should by building and running the project (click the ‘play’ button, or cmd+r).
+</p>
+
