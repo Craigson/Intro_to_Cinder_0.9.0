@@ -382,13 +382,17 @@ Add the following lines of code after the existing #includes:
 #include "Particle.hpp"
 #include "cinder/Rand.h"
 const int NUM_PARTICLES = 200;
-
+</pre>
+<p>
 Add the following line of code inside the BasicParticlesApp class:
-
+</p>
+<pre>
 	vector<Particle> mParticles;
-
+</pre>
+<p>
 Add the following lines of code to your App’s setup() function:
-
+</p>
+<pre>
     mParticles = vector<Particle>();
     
     for (int i = 0; i < NUM_PARTICLES; i++)
@@ -398,9 +402,11 @@ Add the following lines of code to your App’s setup() function:
         rand.y *= getWindowHeight();
         mParticles.push_back( Particle( rand ));
     }
-
+</pre>
+<p>
 Add the following lines of code to the App’s draw() function:
-
+<p>
+<pre>
     gl::clear( Color::black() );
     
     for (int i = 0; i < mParticles.size(); i++)
