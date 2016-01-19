@@ -146,12 +146,12 @@ will print:
 As we mentioned before, C++ is statically typed, which means we need to declare what type of variable we’re creating.  In a language like Javascript, you can declare a an integer variable by simply writing “var myInt;”, whereas in C++ we need to expressly tell the compiler that “hey, this variable is an integer”, so we’d have to say “int myInt”.
 
 For now, we’ll be focusing on a few basic types.
-
+<pre>
 Integers	-	These are whole numbers (either positive or negative).
 		-	We declare an integer using int
 		-	Eg	. int myInt = 4;
 		-	Eg. 	int myOtherInt = -2;
-
+</pre>
 Floats		-	Floating point numbers have decimal place (fractional numbers) and can be positive or negative
 		-	We declare a float using float
 		-	Eg.	float myFloat = -3.045;
