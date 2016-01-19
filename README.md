@@ -147,16 +147,19 @@ As we mentioned before, C++ is statically typed, which means we need to declare 
 
 For now, we’ll be focusing on a few basic types.
 <pre>
-Integers	-	These are whole numbers (either positive or negative).
-		-	We declare an integer using int
-		-	Eg	. int myInt = 4;
-		-	Eg. 	int myOtherInt = -2;
+Integers	
+-	These are whole numbers (either positive or negative).
+-	We declare an integer using int
+-	Eg	. int myInt = 4;
+-	Eg. 	int myOtherInt = -2;
 </pre>
-Floats		-	Floating point numbers have decimal place (fractional numbers) and can be positive or negative
-		-	We declare a float using float
-		-	Eg.	float myFloat = -3.045;
-		-	Eg.	float myOtherFloat = -0.001;
-
+<pre>
+Floats		
+-	Floating point numbers have decimal place (fractional numbers) and can be positive or negative
+-	We declare a float using float
+-	Eg.	float myFloat = -3.045;
+-	Eg.	float myOtherFloat = -0.001;
+</pre>
 Booleans	-	Evaluates to ‘true’ or ‘false’
 		-	We declare boolean variables using bool
 		-	Eg. 	bool isThisWorking = false;	
