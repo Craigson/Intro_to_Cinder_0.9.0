@@ -417,9 +417,21 @@ Add the following lines of code to the App’s draw() function:
 
 ---
 
-<h3>What's next?</h3>
-let's see if this works.  
+<h3>What's next?  </h3>  
 
-and this?
+<h5>Adjusting the window Settings</h>
+<p>Unlike p5 or processing, adjusting the window size is not quite as straight forward, but is still easy enough once you know what to do.  Every C++ program needs a main() function.  The creators of Cinder have created the convenient functions for us in the form of setup(), update(), and draw() that automatically form part of the app's main() function by means of the CINDER_APP() that you find at the bottom of any Cinder project's main app .cpp file.  </p>
+![alt text](screenshots/16-main_app.jpg)  
 
+<p>From the picture above, you can see that the CINDER_APP() function takes 2 arguments.  The first is the code for your app (which is actually written as a class), and the second is you telling the main() C++ which renderer you want to use. In this case being the default *RendererGl*.</p>
 
+<p>In order to adjust the window's settings, we need to pass a third argument to the CINDER_APP().  The third argument needs to be a function pointer.  Pointer's are a fundamental concept in C++ and are one of the reasons it's such a powerful language, however the concept can be difficult to grasp, especially at first.  We discussed earlier that a variable is actually a physical location in your computer's memory, or an *address*.  A *pointer* essentially points to that address.  Don't worry if that doesn't make much sense yet, it's not too important at this juncture.  Just know that when we pass a function pointer as an argument, it's simply like saying "There's a function that exists somewhere, and it's located in physical memory at address 'x'.  Go to that address and execute the code you find there.</p>
+
+<p>We pass a function pointer using the following syntax:</p>
+<pre>
+[&]( App::Settings *settings ) {
+	settings->setWindowSize( 1280, 720 );
+}
+</pre>  
+<p>Your final CINDER_APP() should look something like this:</p>
+![alt text](screenshots/17-settings.jpg)
