@@ -187,3 +187,33 @@ Vectors
 - 	Eg. a vector containing integer values will be declared like this:
 -	vector<int> myIntegerContainer;
 </pre>
+
+---
+
+<h4>Section F:	Memory</h4>
+<p>
+This is where things start to get a little more complicated, so we’ll try and keep it as simple as possible.  Let’s use a simple analogy: think of a variable as a type of container, like a physical box, that can only hold one type of object. So, declaring an integer variable “int myBox” is like saying “i have a box, and the only thing that will fit in this particular box is an integer, and the box can only hold one at a time”.  Now, what’s important to remember is that when you declare a variable, your computer allocates it a very specific location in its physical memory - think of this as placing your box in a very specific place in a room, say the north-west corner. Imagine now that this box is glued to the floor, so that it cannot move.  It doesn’t matter what integer you put in the box, or how many times you swap it for another, the box never moves.  The same concept applies to memory allocation.  When you declare an integer variable (or any other type for that matter), your computer assigns that variable an address - this is its physical location in memory.  You can change the value of the integer as many times as you want, but the address remains the same.  
+</p>
+<p>
+We can access the address of any variable using the address operator ‘&’ in front of the variable name.
+</p>
+<p>
+Let’s test this out… place the following lines of code into your program:
+</p>
+<pre>
+//declare your global integer variable ( above your app class )
+int myInteger; 
+
+//place the following lines in the setup() function:
+    myInteger = 10;
+    cout << "the value of myInteger is: " << myInteger << endl;
+    cout << "myInteger's location in memory: " << &myInteger << endl;
+    
+    cout << endl;
+    
+    myInteger = -4;
+    cout << "the value of myInteger is: " << myInteger << endl;
+    cout << "myInteger's location in memory: " << &myInteger << endl;
+</pre>
+
+![alt text](screenshots/7-address.jpg)
