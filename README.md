@@ -127,9 +127,10 @@ One last thing about about printing to the console… Think of Arduino’s “pr
 will print the following to the console: Hello World, my name is Craig.
 
 whereas:
-
+	'''c+++
 	cout << “Hello World, “ << endl;
 	cout << “my name is Craig.” << endl;
+	'''
 
 will print:	'''Hello World,
 		my name is Craig.'''
