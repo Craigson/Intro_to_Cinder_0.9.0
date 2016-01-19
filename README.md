@@ -133,7 +133,9 @@ whereas:
 	cout << “my name is Craig.” << endl;
 	
 
-will print:	
-	```>Hello World,```
-	```>my name is Craig.```
+will print:
+<pre>
+	```Hello World,```
+	```my name is Craig.```
+</pre>
 <p>
