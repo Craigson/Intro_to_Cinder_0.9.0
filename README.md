@@ -21,3 +21,12 @@ Useful links:
 <p>
 Move the extracted folder to your Documents folder. It’s a good Idea to keep the Cinder folder at this level (eg. /Users/Craig/Documents/cinder_0.9.0).  You can rename the folder, but I suggest keeping the release number, ie “0.9.0”, projects don’t necessarily work across separate builds.  In other words, a project that you built with cinder 0.8.4 may not necessarily run using 0.9.0 as as part of the library may have been deprecated.
 </p>
+
+<h5>3)Test that everything works </h5>
+<p>
+Navigate to the examples (called ‘samples’ in Cinder) and open the Xcode project file.  I like this one: '/Users/Craig/Documents/cinder_0.9.0/samples/_opengl/ParticleSphereGPU' 
+
+Now, navigate to the 'xcode' folder and open the 'ParticleSphereGPU.xcodeproj' file.
+
+Build and run the project by clicking the ‘play’ button, or using the keyboard shortcut ‘cmd+r’
+</p>
