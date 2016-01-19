@@ -238,7 +238,7 @@ A classic analogy of a class is using the example of a car.  Say you have a clas
 Follow the steps outlined in Section B and create a new Cinder project using TinderBox.  Give it a name of your choosing, I’m calling mine ‘BasicParticles’ and ensure the location is set to the folder you created for your projects.
 </p>
 ![alt text](screenshots/8-BasicParticles.jpg)
-
+---
 <h5>Step 1:	Creating a new Class</h5>
 <p>
 In the project navigator (by default on the left-hand side of xcode), right click on the “Source” folder and select “New File…”
@@ -263,7 +263,7 @@ Drag the ‘Particle.hpp’ file into the “Headers” folder.
 <p>
 A C++ class file is separated into two separate files: the header file ( .h or .hpp ) and the C plus plus file ( .cpp ).  The header file essentially declares what functions and variables the class will contain, whereas the .cpp file defines what they are.
 </p>
-
+---
 <h5> Step 2:	Declaring the Particle Class in the header file</h5>
 <p>
 Click on the “Particle.h” (or “Particle.hpp”) file to open it.
