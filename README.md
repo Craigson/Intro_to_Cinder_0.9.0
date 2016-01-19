@@ -244,7 +244,7 @@ Follow the steps outlined in Section B and create a new Cinder project using Tin
 In the project navigator (by default on the left-hand side of xcode), right click on the “Source” folder and select “New File…”
 </p>
 
-![alt text](screenshots/9-addFiles.jpg)
+![alt text](screenshots/9-add_files.jpg)
 
 <p>Select “C++ File”, click next.</p>
 
