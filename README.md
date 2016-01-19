@@ -131,6 +131,6 @@ whereas:
 	cout << “Hello World, “ << endl;
 	cout << “my name is Craig.” << endl;
 
-will print:	Hello World,
-		my name is Craig.
+will print:	'''Hello World,
+		my name is Craig.'''
 <p>
