@@ -134,6 +134,6 @@ whereas:
 	
 
 will print:	
-	```Hello World,```
-	```my name is Craig.```
+	```>Hello World,```
+	```>my name is Craig.```
 <p>
