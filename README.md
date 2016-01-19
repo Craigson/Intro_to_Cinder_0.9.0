@@ -368,5 +368,50 @@ void Particle::display()
 }
 </pre>
 
+![alt text](screenshots/14-define_class.jpg)
+
+<h5>Step 4:	The main app</h5>
+
+<p>
+Open your main BasicParticlesApp.cpp file.
+</p>
+<p>
+Add the following lines of code after the existing #includes:
+</p>
+<pre>
+#include "Particle.hpp"
+#include "cinder/Rand.h"
+const int NUM_PARTICLES = 200;
+
+Add the following line of code inside the BasicParticlesApp class:
+
+	vector<Particle> mParticles;
+
+Add the following lines of code to your App’s setup() function:
+
+    mParticles = vector<Particle>();
+    
+    for (int i = 0; i < NUM_PARTICLES; i++)
+    {
+        vec2 rand = randVec2();
+        rand.x *= getWindowWidth();
+        rand.y *= getWindowHeight();
+        mParticles.push_back( Particle( rand ));
+    }
+
+Add the following lines of code to the App’s draw() function:
+
+    gl::clear( Color::black() );
+    
+    for (int i = 0; i < mParticles.size(); i++)
+    {
+        mParticles[i].run();
+    }
+</pre>
+
 ![alt text](screenshots/15-main_code.jpg)
+
+<p> Build and run the code.  Et Voila! </p>
+
+
 
