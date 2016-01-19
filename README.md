@@ -278,16 +278,92 @@ Add the following lines of code:
 
 	#include <cinder/gl/gl.h>
 	#include <cinder/Vector.h>
-
+</pre>
+<p>
 if that gives you errors, try the following:
+</p>
+<pre>
 	#pragma once
 
 	#include “cinder/gl/gl.h”
 	#include “cinder/Vector.h”
-
-Now add the following lines:
+</pre>
+<p>Now add the following lines:</p>
+<pre>
 	class Particle {
 	};
 </pre>
 
-Build and run the program.
+<p>Build and run the program.</p>
+
+![alt text](screenshots/12-particle_header.jpg)
+<p>
+As we mentioned in Section C, lines of code that start with ‘#’ are preprocessor directives.  “#pragma once” tells the compiler to add this header file to the project only once, no matter how many other classes make use of it.  The #includes tell Xcode that you’ll be using pieces of code from the OpenGL and Vector libraries that form part of the C++ language.
+</p>
+<p>
+We declare the type class by typing “class Particle { };”.  All of the code for our class will be placed between the curly braces.
+</p>
+<p>
+Now we add the constructor, member functions and member variables.  Add the following lines of code inside your particle class:
+</p>
+<pre>
+public:
+    Particle();
+    Particle( ci::vec2 location );
+    
+    void run();
+    void update();
+    void display();
+    
+    ci::vec2 mLocation;
+    ci::vec2 mAcceleration;
+    ci::vec2 mVelocity;
+</pre>
+
+![alt text](screenshots/13-header_code.jpg)
+
+---
+
+<h5>Step 3:	Defining the Class</h5>
+<p>
+Add the following lines of code to the Particle.cpp file:
+<p>
+<pre>
+#include "cinder/Rand.h"
+
+using namespace ci;
+using namespace ci::app;
+
+Particle::Particle()
+{
+}
+
+Particle::Particle( ci::vec2 location )
+{
+    mAcceleration = ci::vec2( ci::randFloat(-.02,.02), ci::randFloat(-.02,.02));
+    mVelocity = ci::vec2( ci::randFloat(-2,2) , ci::randFloat(-2,2) );
+    mLocation = location;
+}
+
+void Particle::run()
+{
+    update();
+    display();
+}
+
+void Particle::update()
+{
+    mVelocity += mAcceleration;
+    mLocation += mVelocity;
+    mAcceleration *= 0;
+    if (mLocation.x > getWindowWidth() || mLocation.x < 0) mVelocity.x *= -1;
+    if (mLocation.y > getWindowHeight() || mLocation.y < 0) mVelocity.y *= -1;
+}
+
+void Particle::display()
+{
+    gl::color( ColorA8u( 255, 255, 255, 255 ) );
+    gl::drawSolidEllipse( mLocation, 3.0, 3.0 );
+    
+}
+</pre>
