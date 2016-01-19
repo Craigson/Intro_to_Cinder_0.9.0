@@ -121,18 +121,19 @@ This seems trivial right now, but will save us time and effort later.
 
 One last thing about about printing to the console… Think of Arduino’s “print()” function, it’ll print everything to the same line of the console, whereas “println()” includes a newline and carriage return, ie. it prints whatever you pass as an argument at the beginning of a new line.  To do this in C++, we include “endl” after “cout”, to tell the console stream that we want to end the line.  So, printing:
 
-	'''cout << “Hello World, ”;'''
-	'''cout << “my name is Craig.”;'''
+	cout << “Hello World, ”;
+	cout << “my name is Craig.”;
 
 will print the following to the console: 
-'''Hello World, my name is Craig.'''
+	Hello World, my name is Craig.
 
 whereas:
 
-	'''cout << “Hello World, “ << endl;'''
+	cout << “Hello World, “ << endl;
 	cout << “my name is Craig.” << endl;
-	'''
+	
 
-will print:	'''Hello World,
-		my name is Craig.'''
+will print:	
+	Hello World,
+	my name is Craig.
 <p>
