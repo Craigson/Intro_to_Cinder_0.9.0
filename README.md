@@ -249,8 +249,6 @@ In the project navigator (by default on the left-hand side of xcode), right clic
 <p>Type in “Particle”, make sure “also create a header file” is checked, click next.
 Don’t do anything, and click “Create”.</p>
 
-![alt text](screenshots/11-name.jpg)
-
 <p>
 You should see two new files “Particle.h” and “Particle.cpp” in your Source folder (if you have a newer version of xCode, the header might be a .hpp file, don’t panic this is fine, it won’t affect your program ).
 </p>
