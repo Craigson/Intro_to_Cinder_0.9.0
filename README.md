@@ -10,10 +10,6 @@ Useful links:
 
 ---
 
-<h4> </h4>
-<h5> </h5>
-
-
 <h4>Setting up Cinder</h4>
 <h5>1) Download Cinder:</h5>
 <p> Go to the Cinder website and download the latest release - 0.9.0 for Mac OSX (https://libcinder.org/download) </p>
@@ -254,6 +250,7 @@ In the project navigator (by default on the left-hand side of xcode), right clic
 Don’t do anything, and click “Create”.</p>
 
 ![alt text](screenshots/11-name.jpg)
+
 <p>
 You should see two new files “Particle.h” and “Particle.cpp” in your Source folder (if you have a newer version of xCode, the header might be a .hpp file, don’t panic this is fine, it won’t affect your program ).
 </p>
