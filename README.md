@@ -47,7 +47,7 @@ Navigate to the folder Cinder > tools > TinderBox-Mac and open TinderBox - if yo
 
 You should see something like this: 
 </p>
-![alt text](screenshots/1-tinderbox.jpg)
+![alt text](screenshots/2-tinderbox.jpg)
 
 <p>
 ‘Template’ should always be ‘Basic OpenGL’.
