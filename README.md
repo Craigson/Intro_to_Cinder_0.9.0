@@ -135,7 +135,43 @@ whereas:
 
 will print:
 <pre>
-	```Hello World,```
-	```my name is Craig.```
+	Hello World,
+	my name is Craig.
 </pre>
-<p>
+
+---
+
+<h4>Section E:	Variables and types.</h4>
+
+As we mentioned before, C++ is statically typed, which means we need to declare what type of variable we’re creating.  In a language like Javascript, you can declare a an integer variable by simply writing “var myInt;”, whereas in C++ we need to expressly tell the compiler that “hey, this variable is an integer”, so we’d have to say “int myInt”.
+
+For now, we’ll be focusing on a few basic types.
+
+Integers	-	These are whole numbers (either positive or negative).
+		-	We declare an integer using int
+		-	Eg	. int myInt = 4;
+		-	Eg. 	int myOtherInt = -2;
+
+Floats		-	Floating point numbers have decimal place (fractional numbers) and can be positive or negative
+		-	We declare a float using float
+		-	Eg.	float myFloat = -3.045;
+		-	Eg.	float myOtherFloat = -0.001;
+
+Booleans	-	Evaluates to ‘true’ or ‘false’
+		-	We declare boolean variables using bool
+		-	Eg. 	bool isThisWorking = false;	
+
+String		-	A string is actually an array of characters
+		-	We declare strings using quotation marks “ ” 
+		-	Eg. 	“Hello, my name is Craig”
+
+Void		-	“void” allows us to create functions that don’t return anything
+		-	Eg.	void myApp::setup()
+			{
+				cout << “this function doesn’t return anything” << endl;
+			}
+
+Vectors		-	A vector is type of C++ container, similar to an array
+		-	We declare a vector using vector<T>, where ‘T’ represents the Type
+		- 	Eg. a vector containing integer values will be declared like this:
+		-	vector<int> myIntegerContainer;
