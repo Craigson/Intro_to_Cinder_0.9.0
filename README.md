@@ -217,3 +217,49 @@ int myInteger;
 </pre>
 
 ![alt text](screenshots/7-address.jpg)
+
+<p>
+You can see from the console output that even though you’ve changed the value of the integer, the address, or the location in memory where the value of myInteger gets stored, never changes.  This is a small part of what makes C++ so powerful.  Ie. you’ve swapped the objects that were in the box, but the box still remains glued to the floor in the north-west corner of the room.
+</p>
+---
+<h4>Section G:	Object-Oriented Programming (OOP)</h4>
+<p>
+Object-Oriented Programming (OOP) is far too complex of a topic to cover in a single three hour session, so we’ll do our best to give a brief conceptual overview, and explore the concepts as we go through the example code.
+</p>
+<p>
+OOP is programming language model that focuses on the use of objects as the primary data structures.  Objects are modular pieces of reusable code.  At the heart of the OOP model are classes.  You can think of classes as a kind of template.  A class essentially describes what properties an object will have, but not the values of those properties.
+</p>
+<p>
+A classic analogy of a class is using the example of a car.  Say you have a class called “Car”.  On a fundamental level, all cars are essentially the same: they have the same function, the have similar features, they work in much the same way, they all have wheels, the all have engines.  The class is like a blueprint for making the car.  You can think of an individual unique car being an Object. Let’s say that our Car Object is a VW beetle.  It’s part of the Car class, because it has doors, it has a chassis, it has a body, it has wheels, it has a specific paint colour, it serves to get people from A to B, it shares common traits with all other cars.  However, this specific VW object has a very unique shape, it has a particular type of engine, it has its own unique paint colour, it’s owned by a specific person.  The properties that differentiate the VW beetle from other cars belong to the object, but the blueprint for what makes it a car is down to the class.
+</p>
+---
+<h4>Section H:	Particles!</h4>
+<p>
+Follow the steps outlined in Section B and create a new Cinder project using TinderBox.  Give it a name of your choosing, I’m calling mine ‘BasicParticles’ and ensure the location is set to the folder you created for your projects.
+</p>
+![alt text](screenshots/8-BasicParticles.jpg)
+
+<h5>Step 1:	Creating a new Class</h5>
+<p>
+In the project navigator (by default on the left-hand side of xcode), right click on the “Source” folder and select “New File…”
+</p>
+
+![alt text](screenshots/9-addFiles.jpg)
+
+<p>Select “C++ File”, click next.</p>
+
+![alt text](screenshots/10-filetype.jpg)
+
+<p>Type in “Particle”, make sure “also create a header file” is checked, click next.
+Don’t do anything, and click “Create”.</p>
+
+![alt text](screenshots/11-name.jpg)
+<p>
+You should see two new files “Particle.h” and “Particle.cpp” in your Source folder (if you have a newer version of xCode, the header might be a .hpp file, don’t panic this is fine, it won’t affect your program ).
+</p>
+<p>
+Drag the ‘Particle.hpp’ file into the “Headers” folder.
+</p>
+<p>
+A C++ class file is separated into two separate files: the header file ( .h or .hpp ) and the C plus plus file ( .cpp ).  The header file essentially declares what functions and variables the class will contain, whereas the .cpp file defines what they are.
+</p>
