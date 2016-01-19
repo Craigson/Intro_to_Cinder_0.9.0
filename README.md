@@ -263,3 +263,31 @@ Drag the ‘Particle.hpp’ file into the “Headers” folder.
 <p>
 A C++ class file is separated into two separate files: the header file ( .h or .hpp ) and the C plus plus file ( .cpp ).  The header file essentially declares what functions and variables the class will contain, whereas the .cpp file defines what they are.
 </p>
+
+<h5> Step 2:	Declaring the Particle Class in the header file</h5>
+<p>
+Click on the “Particle.h” (or “Particle.hpp”) file to open it.
+Erase everything from the file, none of it is necessary.
+*This may very depending on your version of Cinder and/or Xcode.
+</p>
+<p>
+Add the following lines of code:
+</p>
+<pre>
+	#pragma once
+
+	#include <cinder/gl/gl.h>
+	#include <cinder/Vector.h>
+
+if that gives you errors, try the following:
+	#pragma once
+
+	#include “cinder/gl/gl.h”
+	#include “cinder/Vector.h”
+
+Now add the following lines:
+	class Particle {
+	};
+</pre>
+
+Build and run the program.
