@@ -17,4 +17,7 @@ Useful links:
 <h5>1) Download Cinder:</h5>
 <p> Go to the Cinder website and download the latest release - 0.9.0 for Mac OSX (https://libcinder.org/download) </p>
 
-
+<h5>2)	Place Cinder in your Documents folder </h5>
+<p>
+Move the extracted folder to your Documents folder. It’s a good Idea to keep the Cinder folder at this level (eg. /Users/Craig/Documents/cinder_0.9.0).  You can rename the folder, but I suggest keeping the release number, ie “0.9.0”, projects don’t necessarily work across separate builds.  In other words, a project that you built with cinder 0.8.4 may not necessarily run using 0.9.0 as as part of the library may have been deprecated.
+</p>
