@@ -182,7 +182,7 @@ Vectors
 -	A vector is type of C++ container, similar to an array
 -	We declare a vector using vector<T>, where ‘T’ represents the Type
 - 	Eg. a vector containing integer values will be declared like this:
--	vector`<int>` myIntegerContainer;
+-	vector &lt; int &gt; myIntegerContainer;
 </pre>
 
 ---
