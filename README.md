@@ -102,7 +102,7 @@ Xcode provides us with a debug console, similar to the one you’ll find in your
 ![alt text](screenshots/4-console.jpg)
 <p>
 Unlike a web browser, where you’d print something using Serial.print(“blah blah”), C++ uses the Standard Output Stream, which is part of the C++ Standard Template Library.  We usually access library member functions using the ‘::’ operator.  For example, to make use of the standard output stream or “cout” (think of this as an abbreviation for “console out”).  So, in order to print something to the console, the code would look like this:
-	std::cout << “Hello World!”;
+	std::cout &lt;&lt; “Hello World!”;
 
 Try placing this line of code in your project’s setup() function.  Build and run the project.  Your result should look like this:
 </p>
@@ -112,22 +112,22 @@ Having to write “std::” every time you want to print something to the consol
 </p>
 ![alt text](screenshots/6-namespaces.jpg)
 <p>
-You should see several lines of code in your project file that look like the image above.  “using namespace” is basically bringing everything from that library into your project’s scope.  Essentially, including “using namespace std;” in your code is like telling the compiler “consider everything in the std (standard ) library to be part of my project”.  By doing this, we can simply use: ‘cout << “Hello World!”; instead of “std::cout << “Hello World!”;
+You should see several lines of code in your project file that look like the image above.  “using namespace” is basically bringing everything from that library into your project’s scope.  Essentially, including “using namespace std;” in your code is like telling the compiler “consider everything in the std (standard ) library to be part of my project”.  By doing this, we can simply use: ‘cout &lt;&lt; “Hello World!”; instead of “std::cout &lt;&lt; “Hello World!”;
 
 This seems trivial right now, but will save us time and effort later.
 
 One last thing about about printing to the console… Think of Arduino’s “print()” function, it’ll print everything to the same line of the console, whereas “println()” includes a newline and carriage return, ie. it prints whatever you pass as an argument at the beginning of a new line.  To do this in C++, we include “endl” after “cout”, to tell the console stream that we want to end the line.  So, printing:
 
-	cout << “Hello World, ”;
-	cout << “my name is Craig.”;
+	cout &lt;&lt; “Hello World, ”;
+	cout &lt;&lt; “my name is Craig.”;
 
 will print the following to the console: 
 	Hello World, my name is Craig.
 
 whereas:
 
-	cout << “Hello World, “ << endl;
-	cout << “my name is Craig.” << endl;
+	cout &lt;&lt; “Hello World, “ &lt;&lt; endl;
+	cout &lt;&lt; “my name is Craig.” &lt;&lt; endl;
 	
 
 will print:
@@ -174,13 +174,13 @@ Void
 -	“void” allows us to create functions that don’t return anything
 -	Eg.	void myApp::setup()
 		{
-			cout << “this function doesn’t return anything” << endl;
+			cout &lt;&lt; “this function doesn’t return anything” &lt;&lt; endl;
 		}
 </pre>
 <pre>
 Vectors		
 -	A vector is type of C++ container, similar to an array
--	We declare a vector using vector<T>, where ‘T’ represents the Type
+-	We declare a vector using vector&lt;T&gt;, where ‘T’ represents the Type
 - 	Eg. a vector containing integer values will be declared like this:
 -	vector &lt; int &gt; myIntegerContainer;
 </pre>
@@ -192,7 +192,7 @@ Vectors
 This is where things start to get a little more complicated, so we’ll try and keep it as simple as possible.  Let’s use a simple analogy: think of a variable as a type of container, like a physical box, that can only hold one type of object. So, declaring an integer variable “int myBox” is like saying “i have a box, and the only thing that will fit in this particular box is an integer, and the box can only hold one at a time”.  Now, what’s important to remember is that when you declare a variable, your computer allocates it a very specific location in its physical memory - think of this as placing your box in a very specific place in a room, say the north-west corner. Imagine now that this box is glued to the floor, so that it cannot move.  It doesn’t matter what integer you put in the box, or how many times you swap it for another, the box never moves.  The same concept applies to memory allocation.  When you declare an integer variable (or any other type for that matter), your computer assigns that variable an address - this is its physical location in memory.  You can change the value of the integer as many times as you want, but the address remains the same.  
 </p>
 <p>
-We can access the address of any variable using the address operator ‘&’ in front of the variable name.
+We can access the address of any variable using the address operator ‘&amp;’ in front of the variable name.
 </p>
 <p>
 Let’s test this out… place the following lines of code into your program:
@@ -203,14 +203,14 @@ int myInteger;
 
 //place the following lines in the setup() function:
     myInteger = 10;
-    cout << "the value of myInteger is: " << myInteger << endl;
-    cout << "myInteger's location in memory: " << &myInteger << endl;
+    cout &lt;&lt; "the value of myInteger is: " &lt;&lt; myInteger &lt;&lt; endl;
+    cout &lt;&lt; "myInteger's location in memory: " &lt;&lt; &amp;myInteger &lt;&lt; endl;
     
-    cout << endl;
+    cout &lt;&lt; endl;
     
     myInteger = -4;
-    cout << "the value of myInteger is: " << myInteger << endl;
-    cout << "myInteger's location in memory: " << &myInteger << endl;
+    cout &lt;&lt; "the value of myInteger is: " &lt;&lt; myInteger &lt;&lt; endl;
+    cout &lt;&lt; "myInteger's location in memory: " &lt;&lt; &amp;myInteger &lt;&lt; endl;
 </pre>
 
 ![alt text](screenshots/7-address.jpg)
@@ -272,8 +272,8 @@ Add the following lines of code:
 <pre>
 	#pragma once
 
-	#include <cinder/gl/gl.h>
-	#include <cinder/Vector.h>
+	#include &lt;cinder/gl/gl.h&gt;
+	#include &lt;cinder/Vector.h&gt;
 </pre>
 <p>
 if that gives you errors, try the following:
@@ -352,8 +352,8 @@ void Particle::update()
     mVelocity += mAcceleration;
     mLocation += mVelocity;
     mAcceleration *= 0;
-    if (mLocation.x > getWindowWidth() || mLocation.x < 0) mVelocity.x *= -1;
-    if (mLocation.y > getWindowHeight() || mLocation.y < 0) mVelocity.y *= -1;
+    if (mLocation.x > getWindowWidth() || mLocation.x &lt; 0) mVelocity.x *= -1;
+    if (mLocation.y > getWindowHeight() || mLocation.y &lt; 0) mVelocity.y *= -1;
 }
 
 void Particle::display()
@@ -383,15 +383,16 @@ const int NUM_PARTICLES = 200;
 Add the following line of code inside the BasicParticlesApp class:
 </p>
 <pre>
-	vector<Particle> mParticles;
+
+	vector&lt; Particle &gt; mParticles;
 </pre>
 <p>
 Add the following lines of code to your App’s setup() function:
 </p>
 <pre>
-    mParticles = vector<Particle>();
+    mParticles = vector &lt; Particle &gt;();
     
-    for (int i = 0; i < NUM_PARTICLES; i++)
+    for (int i = 0; i &lt; NUM_PARTICLES; i++)
     {
         vec2 rand = randVec2();
         rand.x *= getWindowWidth();
@@ -405,7 +406,7 @@ Add the following lines of code to the App’s draw() function:
 <pre>
     gl::clear( Color::black() );
     
-    for (int i = 0; i < mParticles.size(); i++)
+    for (int i = 0; i &lt; mParticles.size(); i++)
     {
         mParticles[i].run();
     }
